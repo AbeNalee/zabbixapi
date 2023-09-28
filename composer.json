@@ -1,5 +1,5 @@
 {
-    "name": "confirm-it-solutions/php-zabbix-api",
+    "name": "abenalee/zabbixapi",
     "type": "library",
     "description": "PhpZabbixApi library",
     "keywords": [
@@ -10,7 +10,7 @@
         "rpc",
         "client"
     ],
-    "homepage": "https://github.com/confirm/PhpZabbixApi",
+    "homepage": "https://github.com/abenalee/zabbixapi",
     "license": "MIT",
     "authors": [
         {
@@ -52,14 +52,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Confirm\\ZabbixApi\\": [
+            "AbeNalee\\zabbixapi\\": [
                 "src/"
             ]
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Confirm\\ZabbixApi\\Tests\\": [
+            "AbeNalee\\zabbixapi\\Tests\\": [
                 "tests/"
             ]
         }
