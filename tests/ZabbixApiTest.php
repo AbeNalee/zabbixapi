@@ -25,12 +25,12 @@
  * @author confirm IT solutions GmbH, Rathausstrase 14, CH-6340 Baar
  */
 
-namespace Confirm\ZabbixApi\Tests;
+namespace Abenalee\ZabbixApi\Tests;
 
-use Confirm\ZabbixApi\Exception;
-use Confirm\ZabbixApi\TokenCacheAwareInterface;
-use Confirm\ZabbixApi\ZabbixApi;
-use Confirm\ZabbixApi\ZabbixApiInterface;
+use Abenalee\ZabbixApi\Exception;
+use Abenalee\ZabbixApi\TokenCacheAwareInterface;
+use Abenalee\ZabbixApi\ZabbixApi;
+use Abenalee\ZabbixApi\ZabbixApiInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\RequestOptions;
