@@ -102,10 +102,6 @@ final class ZabbixApi implements ZabbixApiInterface, TokenCacheAwareInterface
 
     /**
      * @param string|null $apiUrl API url (e.g. https://FQDN/zabbix/api_jsonrpc.php)
-     * @param string|null $user Username for Zabbix API
-     * @param string|null $password Password for Zabbix API
-     * @param string|null $httpUser Username for HTTP basic authorization
-     * @param string|null $httpPassword Password for HTTP basic authorization
      * @param string|null $authToken Already issued auth token (e.g. extracted from cookies)
      * @param array $clientOptions Client options
      */
@@ -8505,7 +8501,7 @@ final class ZabbixApi implements ZabbixApiInterface, TokenCacheAwareInterface
         ];
 
         // Add auth token if required.
-        if ($auth && null !== $this->user) {
+        if ($auth) {
             $requestPayload['auth'] = $this->getAuthToken();
         }
 
@@ -8541,7 +8537,7 @@ final class ZabbixApi implements ZabbixApiInterface, TokenCacheAwareInterface
             // If the request is not authorized due an authentication issue, attempt to login again and retry the operation.
             if ($auth && self::UNAUTHORIZED_ERROR_CODE === $e->getCode() &&
                 in_array($e->getMessage(), [self::UNAUTHORIZED_ERROR_MESSAGE, self::UNAUTHORIZED_SESSION_TERMINATED_ERROR_MESSAGE], true) &&
-                $remainingAuthAttempts > 0 && null !== $this->user && null !== $this->password
+                $remainingAuthAttempts > 0
             ) {
                 $this->getAuthToken(false);
 
