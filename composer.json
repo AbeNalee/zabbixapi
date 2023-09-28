@@ -52,14 +52,14 @@
     },
     "autoload": {
         "psr-4": {
-            "AbeNalee\\zabbixapi\\": [
+            "Abenalee\\ZabbixApi\\": [
                 "src/"
             ]
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "AbeNalee\\zabbixapi\\Tests\\": [
+            "Abenalee\\ZabbixApi\\Tests\\": [
                 "tests/"
             ]
         }
